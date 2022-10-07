@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <header> 
+       <h1>Smelly Grandma Lives Here</h1> 
+       </header>
+    <body>
+    <img src="https://cdn.drawception.com/drawings/3tLLqgaFC0.png" alt="Smelly Grandma">
+    </body>
+        <script>
+            let exitParameter=false 
+let goodbyeChecker= false
+function DeafGrandma(input){
+    console.log(input)
+    let isLowerCase=false
+    str=input.replace(/[a-z]/g, "1")
+    if (str.includes("1")){isLowerCase=true}
+    if (input===""){alert("WHAT?!")}
+    else if (isLowerCase === true){alert("SPEAK UP, KID!")}
+    else if (isLowerCase === false && input !== "GOODBYE!") {alert("NO, NOT SINCE 1946!")}
+    else if (input=== "GOODBYE!"&& goodbyeChecker===false) {alert("LEAVING SO SOON?"); 
+    goodbyeChecker=true}
+    else if (input=== "GOODBYE!" && goodbyeChecker===true) {alert("LATER, SKATER!");exitParameter=true}
+
+    if (exitParameter===true){return}
+    else {
+        input=window.prompt()
+        DeafGrandma(input)
+    }
+
+    
+    }
+ alert("HEY KID!")
+ input=window.prompt()
+ DeafGrandma(input)
+        </script>
+    </head>
+</html>
