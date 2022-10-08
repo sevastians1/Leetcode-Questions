@@ -19,7 +19,7 @@ def isValid(s):
             elif x=="[":
                 square.append(count)
             elif x=="{":
-                square.append(count)
+                curly.append(count)
             elif x==")":
                 if count>para[len(para)-1]:
                     del para[len(para)-1]
@@ -27,12 +27,14 @@ def isValid(s):
                 if count>square[len(square)-1]:
                     del square[len(square)-1]
             elif x=="}":
-                if count>square[len(square)-1]:
-                    del square[len(square)-1]
-        # print(para, square, curly)
+                if count>curly[len(curly)-1]:
+                    del curly[len(curly)-1]
+        print(para, square, curly)
         if para ==[] and square == [] and curly ==[]:
             return True
         return False
     except:
         return False
-print(isValid("([)]"))
+print(isValid("()[]{}"))
+string="{[((}))]"
+

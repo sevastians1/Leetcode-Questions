@@ -3,10 +3,10 @@ def sum_pairs(lists, sum):
     dictionary={}
     for x in lists:
         dictionary[x]=x
-    # print(dictionary)
+    print(dictionary)
     for key in dictionary:
         one_value=dictionary[key]
-        # print(one_value)
+        print(one_value)
         for secondkey in dictionary:
             if key==secondkey:
                 continue
@@ -16,9 +16,10 @@ def sum_pairs(lists, sum):
                 answer_list.append([key, secondkey])
                 dictionary[key]="used"
                 dictionary[secondkey]="used"
-            # print(dictionary)
+            print(dictionary)
     if answer_list==[]:
-        return 'unable to find pairs'            
+        return 'unable to find pairs'  
+    print(answer_list)          
     return answer_list
 
 
