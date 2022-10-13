@@ -15,6 +15,7 @@ def is_character_match(string1, string2):
 			dict2[x]+=1
 		else:
 			dict2[x]=1
+	
 	for key in dict1:
 		if key==" ":
 			continue
@@ -25,7 +26,7 @@ def is_character_match(string1, string2):
 				return False
 		else:
 	   		return False
-	# print(string1, string2, dict1, dict2)
+	print(string1, string2, dict1, dict2)
 	return True
 
 
